@@ -20,7 +20,16 @@ function App() {
   return (
     <main>
       <h1>My todos</h1>
-      <button>new</button>
+      <button onClick={createTodo}>+ new</button>
+      <ul>
+        {todos.map((todo) => (
+          <li key={todo.id}>{todo.content}</li>
+        ))}
+      </ul>
+      <div>
+        🥳 App successfully hosted. Try creating a new todo.
+        <br />
+      </div>
     </main>
   );
 }
